@@ -1,0 +1,171 @@
+.sidebar {
+	width: 25%;
+	/* 调窄 */
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: -25%;
+	/* 初始时隐藏 */
+	background-color: rgba(26, 26, 26, 0.5);
+	/* 黑色磨砂玻璃效果 */
+	backdrop-filter: blur(10px);
+	overflow-x: hidden;
+	transition: right 0.5s;
+	/* 使用 transition 进行动画 */
+	padding-top: 80px;
+	z-index: 998;
+}
+
+.sidebar.open {
+	right: 0;
+	/* 展开时显示 */
+}
+
+#sidebarTitle {
+	font-size: 24px;
+	color: #fff;
+	/* 文字颜色改为白色 */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#userInfoForm {
+	padding: 20px;
+	color: #fff;
+	/* 文字颜色改为白色 */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+	width: calc(100% - 40px);
+	/* 调宽 */
+	padding: 15px;
+	/* 调宽 */
+	margin: 20px 0;
+	/* 调大间距 */
+	box-sizing: border-box;
+	background-color: transparent;
+	/* 透明背景 */
+	border: none;
+	color: #fff;
+	/* 文字颜色改为白色 */
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	/* 下方分割线 */
+	outline: none;
+	/* 去掉点击框 */
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+	border-bottom-color: #007bff;
+	/* 获取焦点时，分割线变亮 */
+}
+
+.error-message {
+	display: none;
+	/* 隐藏错误提示 */
+	color: #ff0000;
+	/* 红色字体 */
+	font-size: 12px;
+	/* 小一点 */
+	font-weight: normal;
+	/* 正常 */
+}
+
+button[type="submit"] {
+	width: calc(100% - 40px);
+	/* 调宽 */
+	padding: 15px;
+	/* 调宽 */
+	margin-top: 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	border-radius: 0;
+	outline: none;
+	/* 去掉点击框 */
+}
+
+button[type="submit"]:hover {
+	background-color: #0056b3;
+}
+
+.modal-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 0;
+	z-index: 997;
+	display: none;
+}
+
+.sidebar.open+.modal-overlay {
+	display: block;
+}
+
+
+
+
+
+/* 新方框样式 */
+.new-dialog {
+	display: none;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/屏幕截图 2024-06-03 195928.png");
+	background-size: cover;
+	width: 600px;
+	height: 450px;
+	animation: appearFromBottom 0.5s ease forwards;
+	z-index: 1000;
+	opacity: 0;
+	/* 添加动画效果 */
+}
+
+/* 新关闭按钮样式 */
+.new-exit-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: black;
+	border: none;
+	background-color: white;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.new-exit-btn:focus,
+.new-exit-btn:active {
+	outline: none;
+}
+
+/* 新增动画 */
+@keyframes appearFromBottom {
+	0% {
+		transform: translate(-50%, 100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+}
+
+
+

@@ -1,0 +1,540 @@
+a:link {
+	color: #ffffff;
+}
+
+a:visited {
+	color: #ffffff;
+}
+
+.navCon a:hover {
+	background: linear-gradient(to top, rgba(91, 91, 91, 0.6), rgba(91, 91, 91, 0.2));
+}
+
+body,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	transition: color 0.4s;
+}
+
+nav {
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	margin: 0%;
+	z-index: 990;
+	transition: background-color 0.4s;
+}
+
+nav:hover {
+	background-color: rgba(22, 22, 22, 0.7);
+	/* 黑色磨砂玻璃效果 */
+	backdrop-filter: blur(10px);
+}
+
+.navCon {
+	width: 900px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.navCon li {
+	float: left;
+	width: 145px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 11px;
+	position: relative;
+}
+
+.navCon li a {
+	display: block;
+}
+
+.navCon li a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #ffffff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: background-color 0.4s, transform 0.3s ease-out;
+}
+
+.navCon li a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.navCon li ul {
+	display: none;
+}
+
+.navCon li:hover ul {
+	display: block;
+}
+
+.navCon li ul li {
+	background-color: rgba(22, 22, 22, 0.7);
+	/* 黑色磨砂玻璃效果 */
+	backdrop-filter: blur(10px);
+	transition: background-color 0.4s;
+}
+
+.navCon li ul li:hover {
+	background: linear-gradient(to top, rgba(217, 217, 217, 0.5), rgba(93, 93, 93, 0.8));
+}
+
+nav.gundong {
+	background-color: rgba(22, 22, 22, 0.7);
+	/* 黑色磨砂玻璃效果 */
+	backdrop-filter: blur(10px);
+}
+
+/* 导航栏到达位置变色 */
+nav.whiteStyle {
+	background-color: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(10px);
+}
+
+nav.whiteStyle a {
+	color: #000;
+}
+
+nav.whiteStyle li ul li {
+	background-color: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(10px);
+}
+
+nav.whiteStyle a:hover {
+	background: white;
+}
+
+nav.whiteStyle li a::after {
+	background: #000000;
+}
+
+.sb {
+	background: url("../img/sb3bck2.jpg") no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.sb video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+#button1 {
+	position: absolute;
+	bottom: 100px;
+	left: 30%;
+	width: 300px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	border: none;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#button1:hover {
+	background-color: #b3b3b3;
+	opacity: 1;
+}
+
+#button2 {
+	position: absolute;
+	bottom: 100px;
+	left: 60%;
+	transform: translateX(-50%);
+	width: 300px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#button2:hover {
+	background-color: white;
+	color: black;
+	opacity: 1;
+}
+
+#button1:focus,
+#button2:focus,
+#button1:active,
+#button2:active {
+	outline: none;
+}
+
+/* 
+h1,
+h2 {
+	position: absolute;
+	top: 50%;
+	left: 51%;
+	transform: translate(-50%, -50%);
+	color: #ffffff;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	z-index: 100;
+}
+
+h1 {
+	font-size: 70px;
+	font-weight: 800;
+	top: 17vh;
+	font-weight: 900;
+	font-family: '幼圆';
+}
+
+h2 {
+	font-size: 25px;
+	font-weight: 500;
+	top: 30vh;
+	left: 50%;
+}
+
+h1:hover,
+h2:hover {
+	opacity: 1;
+} */
+/* 
+body:hover h1,
+body:hover h2, */
+body:hover #button1,
+body:hover #button2 {
+	opacity: 1;
+}
+
+#chakan {
+	font-size: 1.25rem;
+	border-bottom: 1px solid white;
+}
+
+#chakan:hover {
+	background: rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+}
+
+.sb2 {
+	padding: 100px;
+	width: 100%;
+	height: 1600px;
+	box-sizing: border-box;
+	background-color: white;
+	background: url("../img/背景.jpg") center/cover no-repeat;
+	overflow: hidden;
+}
+
+.title-container {
+	text-align: center;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.title-container.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+#title1 {
+	font-size: 30px;
+	font-weight: 340;
+	letter-spacing: 10px;
+}
+
+#title2 {
+	font-size: 15px;
+	font-weight: 340;
+	margin-bottom: 50px;
+}
+
+.box-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+}
+
+.box {
+	box-sizing: border-box;
+	width: 700px;
+	height: 620px;
+	background-color: aqua;
+	padding: 60px;
+	text-align: center;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+}
+
+.box.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.box-content {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.box-content.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.box p {
+	font-size: 24px;
+	color: white;
+}
+
+.box button {
+	width: 300px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	margin-top: 10px;
+}
+
+.box button:hover {
+	background-color: white;
+	color: black;
+}
+
+
+.box button:focus,
+.box button:active {
+	outline: none;
+}
+
+#box1 {
+	background: url("../img/机器人一号.png") no-repeat center center;
+	background-size: cover;
+	font-weight: 340;
+}
+
+#box2 {
+	background: url("../img/机器人三号.png") no-repeat center center;
+	background-size: cover;
+	font-weight: 340;
+}
+
+#box3 {
+	background: url("../img/机器人二号.png") no-repeat center center;
+	background-size: cover;
+	font-weight: 340;
+}
+
+#box4 {
+	background: url("../img/机器人四号.png") no-repeat center center;
+	background-size: cover;
+	font-weight: 340;
+}
+
+.sb3 {
+	padding: 90px;
+	width: 100%;
+	height: 900px;
+	box-sizing: border-box;
+	background-color: white;
+	overflow: hidden;
+}
+
+.sb3 p {
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+.sb3 p.animate {
+	animation: fadeInUp 1s forwards;
+}
+
+.sb3 p:first-child::after {
+	content: '';
+	display: block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10px;
+	width: 60px;
+	height: 2px;
+	background: #fff;
+	margin: 0;
+}
+
+.chanPinYouShiBox {
+	position: relative;
+	width: 1100px;
+	height: 574px;
+	margin: auto;
+}
+
+.imgBox {
+	background: url('../img/18f30f6e4bac10a154a3f226c7d2ac1b.jpeg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 63%;
+	height: 574px;
+	background-color: blue;
+	opacity: 0;
+}
+
+.textBox {
+	position: absolute;
+	right: 0;
+	width: 37%;
+	box-sizing: border-box;
+	padding: 0 55px;
+	height: 498px;
+	top: 50%;
+	margin-top: -249px;
+	background-image: linear-gradient(to right bottom, #29cdfe, #4facfe);
+	opacity: 0;
+	padding: 20px;
+	overflow: hidden;
+}
+
+@keyframes fadeInLeft50 {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight50 {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.txt {
+	margin: 60px;
+	color: white;
+	font-size: 26px;
+	text-align: center;
+}
+
+dd {
+	margin: 40px;
+	color: white;
+	font-size: 20px;
+}
+
+.sb4 {
+	background: url("../img/bg1.gif") no-repeat center center;
+	background-size: cover;
+	padding: 90px 0;
+	text-align: center;
+	width: 100%;
+	height: 30vh;
+	padding-top: 250px;
+}
+
+.center p:nth-of-type(1) {
+	margin: 0;
+	font-size: 48px;
+	font-weight: bold;
+	color: #636363;
+}
+
+.center p:nth-of-type(2) {
+	font-size: 24px;
+	color: rgba(99, 99, 99, 0.3);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-top: 3px;
+}
+
+.sb5 {
+	width: 100%;
+	height: 50vh;
+	background: url('../img/屏幕截图 2024-06-06 015236.png') no-repeat center center;
+	background-size: cover;
+}
+
+#scrollToTopBtn {
+	position: fixed;
+	bottom: -80px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	color: black;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: bottom 0.8s;
+	font-size: 24px;
+	box-shadow: 0 4px 8px rgba(71, 71, 71, 0.4);
+	z-index: 9;
+}
+
+#scrollToTopBtn.show {
+	bottom: 30px;
+}

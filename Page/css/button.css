@@ -1,0 +1,73 @@
+.siderbar {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0px;
+	background-color: #ffffff;
+	z-index:980;
+}
+
+.siderbar ul {
+	width: 50px;
+	height: 208px;
+	position: absolute;
+	left: -50px;
+	top: 76%;
+	margin-top: -104px;
+}
+
+.siderbar ul li {
+	width: 50px;
+	height: 50px;
+	margin: 15px 0px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 1px 1px 5px rgba(255, 255, 255, 0.3);
+	position: relative;
+
+}
+
+.siderbar ul li i {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 24px;
+	text-align: center;
+	line-height: 50px;
+	color: #000000;
+}
+
+.siderbar ul li span {
+	display: block;
+	width: 0;
+	overflow: hidden;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 50px;
+	background-color: #ffffff;
+	color: #000000;
+	text-indent: 20px;
+	line-height: 50px;
+	transition: width 0.5s;
+}
+
+.siderbar ul li:hover i {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.siderbar ul li:hover span {
+	width: 140px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.siderbar ul li:nth-child(2):hover span {
+	width: 100px;
+	background-color: #000000;
+	color: #ffffff;
+}
