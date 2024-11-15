@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.location.href = "肢体反馈.html";
 	});
 	sb2button2.addEventListener('click', function() {
-		window.location.href = "../医疗机器人/电动站立.html";
+		window.location.href = "电动站立.html";
 	});
 	sb2button3.addEventListener('click', function() {
-		window.location.href = "../医疗机器人/下肢穿戴.html";
+		window.location.href = "下肢穿戴.html";
 	});
 	sb2button4.addEventListener('click', function() {
-		window.location.href = "../医疗机器人/外骨骼.html";
+		window.location.href = "外骨骼.html";
 	});
 
 });
