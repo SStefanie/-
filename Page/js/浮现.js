@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	var sb2button3 = document.getElementById('sb2button3');
 	var sb2button4 = document.getElementById('sb2button4');
 	sb2button1.addEventListener('click', function() {
-		window.location.href = "肢体反.html";
+		window.location.href = "肢体反馈.html";
 	});
 	sb2button2.addEventListener('click', function() {
 		window.location.href = "电动站立.html";
